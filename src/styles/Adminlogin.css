@@ -1,0 +1,26 @@
+.admin {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.left {
+    background-image: url(../assets/all-images/slider-img/slider-2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 65%;
+    height: 100vh;
+    flex: 1;
+}
+
+.right {
+    width: 35%;
+    height: 70vh;
+    line-height: 2;
+    /* flex: 1; */
+}
+
+.right h2 {
+    text-align: center;
+    padding: 10px;
+}

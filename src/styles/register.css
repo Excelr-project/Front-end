@@ -1,0 +1,47 @@
+.register-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.left-container {
+    background-image: url(../assets/all-images/slider-img/slider-2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+    flex: 1;
+}
+
+.right-container {
+    width: 50%;
+    height: 70vh;
+    line-height: 2;
+    flex: 1;
+
+}
+
+.right-container h2 {
+    text-align: center;
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+}
+
+.right-container input {
+    display: grid;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.right-container form {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.right-container button {
+    margin-top: 10px;
+}
