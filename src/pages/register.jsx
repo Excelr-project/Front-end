@@ -33,7 +33,7 @@ const RegisterPage = () => {
                 console.log("Register success");
                 // console.log(res);
                 alert("Registration Successful");
-                window.location.href = '';
+                window.location.href = '/';
 
             } else {
                 console.log("Failed to register");

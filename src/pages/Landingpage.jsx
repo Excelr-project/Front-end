@@ -33,6 +33,24 @@ const Landingpage = () => {
         setShowCities(false);
     }
 
+    const searchCars = async () => {
+        try {
+            window.location.href = `/usercarpage?cityName=${searchValue}`;
+        } catch (error) {
+            alert("Unable to search");
+            window.location.href = '/search';
+        }
+    }
+
+    // const searchCars = async () => {
+    //     try {
+    //         history.push(`/usercarpage?cityName=${searchValue}`);
+    //     } catch (error) {
+    //         alert("Unable to search");
+    //         window.location.href = '/search';
+    //     }
+    // }
+
     return (
 
         <div>
@@ -40,6 +58,7 @@ const Landingpage = () => {
 
             <div className="bar">
 
+                Select City
                 <input type='text' onClick={handleSearch} placeholder='Search your city' value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
 
                 {showCities && (
@@ -53,6 +72,9 @@ const Landingpage = () => {
                         </ul>
                     </div>
                 )}
+
+                <button onClick={searchCars}>Search</button>
+
             </div>
         </div>
     );

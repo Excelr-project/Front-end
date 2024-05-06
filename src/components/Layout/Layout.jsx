@@ -5,10 +5,10 @@ import Home from "../../pages/Home";
 import Landingpage from "../../pages/Landingpage";
 import Login from "../../pages/Login";
 import Register from "../../pages/register";
+import UserCarPage from "../../pages/userCarPage";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import HeroSlider from "../UI/HeroSlider";
-
 
 const Layout = () => {
   return (
@@ -75,6 +75,18 @@ const Layout = () => {
           <>
             <Header />
             <Landingpage />
+            <Footer />
+          </>
+        }
+      />
+
+
+      <Route
+        path="/usercarpage"
+        element={
+          <>
+            <Header />
+            <UserCarPage />
             <Footer />
           </>
         }

@@ -2,6 +2,7 @@
     max-height: 100px;
     width: 170px;
     overflow: scroll;
+    position: static;
 }
 
 .city-list::-webkit-scrollbar {
