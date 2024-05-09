@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Form, FormGroup, Input } from "reactstrap";
+import { Col, Container, Form, FormGroup, Input, Row } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 
@@ -60,16 +60,16 @@ const Contact = () => {
               <div className="contact__info">
                 <h6 className="fw-bold">Contact Information</h6>
                 <p className="section__description mb-0">
-                  123 ZindaBazar, Sylhet, Bangladesh
+                  Our Cars, BTM layout, Bengaluru
                 </p>
                 <div className=" d-flex align-items-center gap-2">
                   <h6 className="fs-6 mb-0">Phone:</h6>
-                  <p className="section__description mb-0">+88683896366</p>
+                  <p className="section__description mb-0">+91 9652829319</p>
                 </div>
 
                 <div className=" d-flex align-items-center gap-2">
                   <h6 className="mb-0 fs-6">Email:</h6>
-                  <p className="section__description mb-0">example@gmail.com</p>
+                  <p className="section__description mb-0">ourcars@gmail.com</p>
                 </div>
 
                 <h6 className="fw-bold mt-4">Follow Us</h6>

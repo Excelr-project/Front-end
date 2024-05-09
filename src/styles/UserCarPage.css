@@ -1,0 +1,70 @@
+.details {
+    background-image: url('../assets/all-images/blog-img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    opacity: 0.9;
+
+}
+
+.middle {
+    background: rgb(174, 234, 214);
+}
+
+#headingg {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid yellow;
+}
+
+.details {
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.details h1 {
+    font-weight: bold;
+}
+
+.cars {
+    background-image: url('../assets/all-images/blog-img/background1.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    opacity: 0.7;
+    color: white;
+    /* font-weight: bold; */
+}
+
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+#link {
+    color: rgb(117, 11, 215);
+}
+
+.car-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-left: 40px;
+}
+
+.key {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.value {
+    margin-left: 5px;
+}
+
+#key {
+    font-size: 17px;
+    margin-right: 20px;
+    text-decoration: underline;
+}

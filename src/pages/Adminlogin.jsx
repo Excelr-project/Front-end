@@ -14,8 +14,9 @@ const Adminlogin = () => {
 
         try {
             const res = await axios.post("http://localhost:8080/admin/generateKey?email=" + email);
-            setGeneratedKey(res.data.key);
             alert("key generated");
+            setGeneratedKey(res.data.key);
+
         } catch (error) {
             alert("error login");
         }
@@ -27,7 +28,7 @@ const Adminlogin = () => {
         if (key === enteredKey) {
             // setLoggedIn(true);
             alert("signin succesful");
-            window.location.href = './';
+            window.location.href = './AdminActivity';
         } else {
             alert("Error login");
             // window.location.href = './';

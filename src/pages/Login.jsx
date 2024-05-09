@@ -15,11 +15,6 @@ const Login = () => {
     const handleOnSubmit = async (event) => {
         event.preventDefault();
 
-        // const formData = {
-        //     email: document.getElementById('email').value,
-        //     password: document.getElementById('password').value
-        // };
-
         try {
             const res = await axios.get("http://localhost:8080/signin", {
                 params: {
@@ -28,9 +23,9 @@ const Login = () => {
                 }
             });
 
-            const Email = res.data;
-
-            if (formData.email === Email) {
+            const userDTO = res.data;
+            if (userDTO && userDTO.id) {
+                localStorage.setItem('userId', userDTO.id);
                 window.location.href = '/search';
             }
         } catch (error) {

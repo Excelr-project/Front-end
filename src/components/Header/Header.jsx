@@ -35,22 +35,23 @@ const Header = () => {
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
 
   return (
+
     <header className="header ">
       {/* ============ header top ============ */}
-      <div className="header__top bg-dark">
+      <div className="header__top">
         <Container>
           <Row>
             <Col lg="6" md="6" sm="6">
               <div className="header__top__left">
                 <span>Need Help?</span>
                 <span className="header__top__help">
-                  <i class="ri-phone-fill"></i> +1-202-555-0149
+                  <i class="ri-phone-fill"></i> +91 9652829319
                 </span>
               </div>
             </Col>
 
             <Col lg="6" md="6" sm="6">
-              <div className="header__top__right d-flex align-items-center justify-content-end gap-3 bg-dark">
+              <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
                 <Link to="/login" className=" d-flex align-items-center gap-1">
                   <i class="ri-login-circle-line"></i> Login
                 </Link>
@@ -70,7 +71,7 @@ const Header = () => {
       </div>
 
       {/* =============== header middle =========== */}
-      {/* <div className="header__middle">
+      <div className="header__middle">
         <Container>
           <Row>
             <Col lg="4" md="3" sm="4">
@@ -92,8 +93,7 @@ const Header = () => {
                   <i class="ri-earth-line"></i>
                 </span>
                 <div className="header__location-content">
-                  <h4>India</h4>
-                  <h6>Sylhet City, Bangladesh</h6>
+                  <h4>Across India</h4>
                 </div>
               </div>
             </Col>
@@ -104,8 +104,7 @@ const Header = () => {
                   <i class="ri-time-line"></i>
                 </span>
                 <div className="header__location-content">
-                  <h4>Sunday to Friday</h4>
-                  <h6>10am - 7pm</h6>
+                  <h4>24/7 service</h4>
                 </div>
               </div>
             </Col>
@@ -124,7 +123,7 @@ const Header = () => {
             </Col>
           </Row>
         </Container>
-      </div> */}
+      </div>
 
       {/* ========== main navigation =========== */}
 
@@ -150,15 +149,6 @@ const Header = () => {
                 ))}
               </div>
             </div>
-
-            {/* <div className="nav__right">
-              <div className="search__box">
-                <input type="text" placeholder="Search" />
-                <span>
-                  <i class="ri-search-line"></i>
-                </span>
-              </div>
-            </div> */}
           </div>
         </Container>
       </div>
