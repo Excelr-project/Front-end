@@ -25,7 +25,7 @@ const BookingDetails = () => {
                 toDate: toDate,
                 car_id: carId
             });
-            alert("Booked Succesfully! Please check you email for details.")
+            alert("Booked Succesful ! Please check your email for details.")
 
             setBookingMessage('Booking successful');
             window.location.href = `/search`;
@@ -45,6 +45,7 @@ const BookingDetails = () => {
             <p>City Name : {cityName}</p>
             <p>From Date : {fromDate}</p>
             <p>To Date : {toDate}</p>
+            <p id='note'>Note : Pay at Car, Take the Car</p>
             {bookingMessage && <p>{bookingMessage}</p>}
             <button onClick={handleBookCar}>Book Car</button>
         </div>

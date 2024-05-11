@@ -48,25 +48,10 @@ const Header = () => {
         <header className="header ">
 
             <div className="logout">
-                {/* <button onClick={handleLogout}>Log out</button>
-                 */}
 
                 <Button variant="contained" color='bright' onClick={handleLogout}>Log-Out</Button>
             </div>
 
-            {/* <div className="header__top bg-dark">
-                <Container>
-                    <Row>
-
-                        <Col lg="6" md="6" sm="6">
-                            <div className="header__top__right d-flex align-items-right justify-content-end gap-3 bg-dark">
-                                
-
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div> */}
 
             {/* ========== main navigation =========== */}
 

@@ -1,5 +1,5 @@
 .register-page {
-    height: 100vh;
+    height: 500px;
     width: 100%;
     display: flex;
 }
@@ -9,13 +9,11 @@
     background-size: cover;
     background-position: center;
     width: 50%;
-    height: 100vh;
     flex: 1;
 }
 
 .right-container {
     width: 50%;
-    height: 70vh;
     line-height: 2;
     flex: 1;
 
@@ -23,6 +21,7 @@
 
 .right-container h2 {
     text-align: center;
+    text-decoration: underline;
     padding: 10px;
     height: 60px;
     width: 100%;
@@ -31,8 +30,9 @@
 .right-container input {
     display: grid;
     text-align: center;
-    border: none;
-    border-bottom: 2px solid black;
+    border: 3px solid rgb(98, 98, 111);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .right-container form {
@@ -40,6 +40,7 @@
     text-align: center;
     flex-wrap: wrap;
     gap: 30px;
+    margin-left: 10px;
 }
 
 .right-container button {

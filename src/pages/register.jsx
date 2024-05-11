@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { Button } from 'reactstrap';
 import "../styles/register.css";
 
 const RegisterPage = () => {
@@ -29,19 +30,13 @@ const RegisterPage = () => {
         try {
             const res = await axios.post("http://localhost:8080/api/signup", formData);
             if (res.status === 201) {
-                // const userId = res.data.id;
-                console.log("Register success");
-                // console.log(res);
                 alert("Registration Successful");
                 window.location.href = '/';
-
             } else {
-                console.log("Failed to register");
                 alert("Failed to register");
             }
         } catch (err) {
-            // console.error(err.response.data);
-            alert('Registration failed');
+            alert('Unable to Register');
         }
     };
 
@@ -63,7 +58,8 @@ const RegisterPage = () => {
                     <input type="password" id='password' name="password" value={formData.password} onChange={handleChange} placeholder='Enter your password' required />
 
                     <input type="password" name="confirmPassword" id='confirmpassword' value={formData.confirmPassword} onChange={handleChange} placeholder='confirm the password' required />
-                    <button type="submit">Register</button>
+
+                    <Button type='submit' variant="outlined">Register</Button>
                 </form>
             </div>
 

@@ -58,7 +58,7 @@ const Layout = () => {
         path="/cars"
         element={
           <>
-            <Header1 />
+            {/* <Header1 /> */}
             <Cars />
           </>
         }

@@ -9,13 +9,14 @@ const Adminlogin = () => {
     const [generatedKey, setGeneratedKey] = useState('');
     // eslint-disable-next-line no-unused-vars
     const [loggedIn, setLoggedIn] = useState(false);
+    const [SigninMessage, setSigninMessage] = useState('');
 
     const handleGenerateKey = async () => {
 
         try {
             const res = await axios.post("http://localhost:8080/admin/generateKey?email=" + email);
             alert("key generated");
-            setGeneratedKey(res.data.key);
+            setGeneratedKey(res.data);
 
         } catch (error) {
             alert("error login");
@@ -25,13 +26,13 @@ const Adminlogin = () => {
     const handleSignIn = () => {
 
         const enteredKey = document.getElementById('key').value;
-        if (key === enteredKey) {
-            // setLoggedIn(true);
+        if (generatedKey === enteredKey && key.length > 0) {
+            setSigninMessage("Signin Succesful");
             alert("signin succesful");
             window.location.href = './AdminActivity';
         } else {
-            alert("Error login");
-            // window.location.href = './';
+            setSigninMessage("Fill all the Fields");
+            alert("Please fill all the fields !");
         }
     }
 

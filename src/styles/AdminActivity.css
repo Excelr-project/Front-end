@@ -1,3 +1,38 @@
+.adminrole {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.adminlogout {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.adminlogout h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.adminlogout button {
+    height: 40px;
+    margin-top: 10px;
+}
+
+.adminActivity {
+    width: 70%;
+    margin-left: 10px;
+}
+
+
+.adminbg img {
+    margin-top: 5px;
+    background-size: cover;
+}
+
 table {
     border-collapse: separate;
     border-spacing: 10px;
@@ -6,5 +41,5 @@ table {
 
 th,
 td {
-    padding: 9px;
+    padding: 5px;
 }

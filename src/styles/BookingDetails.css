@@ -3,8 +3,32 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* width: 100%; */
-    opacity: 0.7;
-    color: white;
-    /* font-weight: bold; */
+    opacity: 0.8;
+    color: rgb(237, 236, 147);
+    font-size: 20px;
+}
+
+#note {
+    font-size: 15px;
+    color: rgb(166, 242, 242);
+    width: 250px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+p {
+    margin-left: 10px;
+}
+
+button {
+    border: 3px solid rgb(98, 98, 111);
+    border-radius: 10px;
+    padding: 5px;
+    width: 150px;
+
+}
+
+h1 {
+    margin-left: 40px;
+    text-decoration: underline;
 }

@@ -14,6 +14,9 @@ const Landingpage = () => {
     const [cars, setCars] = useState([]);
     const [userId, setUserId] = useState('');
     const [bookingMessage, setBookingMessage] = useState('');
+    const [BookingMessage, setbookingMessage] = useState('');
+    const [showBookings, setShowBookings] = useState([]);
+
     const [Booking, setBooking] = useState([]);
     const [error, setError] = useState('');
 
@@ -58,9 +61,13 @@ const Landingpage = () => {
     const handleBookings = async () => {
         try {
             const res = await axios.get(`http://localhost:8080/bookings/${userId}`);
-            setBooking(res.data);
+            if (res.data.length > 0) {
+                setBooking(res.data)
+            } else {
+                alert("You have No Bookings......Book Now");
+            }
         } catch (error) {
-            setError('No Bookings !');
+            alert("unable to fetch Bookings");
         }
     }
 
@@ -69,7 +76,7 @@ const Landingpage = () => {
             const res = await axios.delete(`http://localhost:8080/cancel/${bookingid}`);
             alert("Booking with id " + bookingid + "cancelled");
             setBookingMessage("Booking Cancelled");
-            handleBookings();
+            setShowBookings(false);
         } catch (error) {
             setBookingMessage("Unable to Cancel");
         }
@@ -134,24 +141,24 @@ const Landingpage = () => {
                     </div>
 
                     <div className='bookings'>
-                        {/* <button id='bookingbtn' onClick={handleBookings}>My Bookings</button> */}
 
                         <Button variant='outlined' color='dark' id='bookingbtn' onClick={handleBookings}>My Bookings</Button>
-                        {error && <p>{error}</p>}
-                        <ul>
-                            {Booking.map((booking, index) => (
-                                <li key={index}>
-                                    {/* <p>User Id: {Booking.userId}</p> */}
-                                    <p>Booking Id : {booking.id}</p>
-                                    <p>Place: {booking.place}</p>
-                                    <p>From Date: {booking.fromDate}</p>
-                                    <p>To Date: {booking.toDate}</p>
-                                    <p>Total Rent: {booking.totalRent}</p>
+                        {showBookings && (
+                            <ul>
+                                {Booking.map((booking, index) => (
+                                    <li key={index}>
+                                        {/* <p>User Id: {Booking.userId}</p> */}
+                                        <p>Booking Id : {booking.id}</p>
+                                        <p>Place: {booking.place}</p>
+                                        <p>From Date: {booking.fromDate}</p>
+                                        <p>To Date: {booking.toDate}</p>
+                                        <p>Total Rent: {booking.totalRent}</p>
 
-                                    <button onClick={() => handleCancelBooking(booking.id)}>Cancel Booking</button>
-                                </li>
-                            ))}
-                        </ul>
+                                        <button onClick={() => handleCancelBooking(booking.id)}>Cancel Booking</button>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
                 </div>
             </div>

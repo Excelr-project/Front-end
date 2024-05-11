@@ -47,7 +47,7 @@ const Testimonial = () => {
         <div className="mt-3 d-flex align-items-center gap-4">
 
           <div>
-            <h6 className="mb-0 mt-3">Tharun KUmar</h6>
+            <h6 className="mb-0 mt-3">Tharun Kumar</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { Button } from 'reactstrap';
+import adminbg from "../assets/all-images/admin-bg.jpg";
 import "../styles/AdminActivity.css";
 
 const AdminActivity = () => {
@@ -132,6 +134,7 @@ const AdminActivity = () => {
 
             alert("Added succesfully");
             setShowForm(false);
+            window.location.href = "/AdminActivity";
         } catch (error) {
             alert("Failed to add car");
         }
@@ -153,6 +156,7 @@ const AdminActivity = () => {
             });
             alert("Updated succesfully");
             setShowFormm(false);
+            window.location.href = "/AdminActivity";
         } catch (error) {
             alert("Failed to Update car");
         }
@@ -165,6 +169,7 @@ const AdminActivity = () => {
             });
             alert("Deleted Succesfully");
             setShowForms(false);
+            window.location.href = "/AdminActivity";
         } catch (error) {
             alert("Unable to delete the car");
         }
@@ -181,130 +186,152 @@ const AdminActivity = () => {
         }
     }
 
+    const handlelogout = () => {
+        const confirmLogout = window.confirm("Admin \n Do you want to Logout");
+        if (confirmLogout) {
+            window.location.href = '/';
+        }
+    };
+
 
 
 
 
 
     return (
-        <div>
 
-            <h2>Perform Admin activity</h2>
-
-            <div className='addCar'>
-
-                <button onClick={() => setShowForm(true)}>Add Car</button> <br /><br />
-
-                {showForm && (
-                    <div>
-                        Company :<input type="text" name='company' value={carDetails.company} onChange={handleChange} placeholder='Company' /> <br />
-
-                        Model :<input type="text" name='model' value={carDetails.model} onChange={handleChange} placeholder='model' /><br />
-
-                        Color:<input type="text" name='color' value={carDetails.color} onChange={handleChange} placeholder='Color' /><br />
-
-                        Year :<input type="number" name='year' value={carDetails.year} onChange={handleChange} placeholder='year' /><br />
-
-                        Rent_per_day :<input type="number" name='rentPerDay' value={carDetails.rentPerDay} onChange={handleChange} placeholder='rentPerDay' /><br />
-
-                        City Id :<input type="number" name='city.id' value={carDetails.city.id} onChange={handleChange} placeholder='City id' /><br />
-
-                        {/* Add Image:<input type='file' onChange={handleImageChange} accept='image/*' /> */}
-
-                        <button onClick={handleSubmitAdd}>Submit</button>
-
-
-                    </div>
-                )}
+        <>
+            <div className="adminlogout">
+                <h1>Welcome Admin !</h1>
+                <Button variant="contained" onClick={handlelogout}>Log-Out</Button>
             </div>
 
+            <div className="adminrole">
 
-            <div className='updateCar'>
+                <div className='adminActivity'>
 
-                <button onClick={() => setShowFormm(true)}>update Car</button> <br /><br />
+                    <div className='addCar'>
 
-                {showFormm && (
-                    <div>
+                        <button onClick={() => setShowForm(true)}>Add Car</button> <br /><br />
 
-                        Car Id :<input type="number" name='carId' value={carDetailss.carId} onChange={handleChangee} placeholder='CarId' /> <br />
+                        {showForm && (
+                            <div>
+                                Company :<input type="text" name='company' value={carDetails.company} onChange={handleChange} placeholder='Company' /> <br /><br />
 
+                                Model :<input type="text" name='model' value={carDetails.model} onChange={handleChange} placeholder='model' /><br /><br />
 
-                        Company :<input type="text" name='company' value={carDetailss.company} onChange={handleChangee} placeholder='Company' /> <br />
+                                Color:<input type="text" name='color' value={carDetails.color} onChange={handleChange} placeholder='Color' /><br /><br />
 
-                        Model :<input type="text" name='model' value={carDetailss.model} onChange={handleChangee} placeholder='model' /><br />
+                                Year :<input type="number" name='year' value={carDetails.year} onChange={handleChange} placeholder='year' /><br /><br />
 
-                        Color:<input type="text" name='color' value={carDetailss.color} onChange={handleChangee} placeholder='Color' /><br />
+                                Rent_per_day :<input type="number" name='rentPerDay' value={carDetails.rentPerDay} onChange={handleChange} placeholder='rentPerDay' /><br /><br />
 
-                        Year :<input type="number" name='year' value={carDetailss.year} onChange={handleChangee} placeholder='year' /><br />
+                                City Id :<input type="number" name='city.id' value={carDetails.city.id} onChange={handleChange} placeholder='City id' /><br /><br />
 
-                        Rent_per_day :<input type="number" name='rentPerDay' value={carDetailss.rentPerDay} onChange={handleChangee} placeholder='rentPerDay' /><br />
-
-                        City Id :<input type="number" name='city.id' value={carDetailss.city.id} onChange={handleChangee} placeholder='City id' /><br />
-
-                        <button onClick={handleSubmitUpdate}>Submit</button>
+                                <button onClick={handleSubmitAdd}>Add</button>
 
 
-                    </div>
-                )}
-            </div>
-
-            <div className='deleteCar'>
-                <button onClick={() => setShowForms(true)}>Delete Car</button> <br /><br />
-
-                {showForms && (
-
-                    <div>
-                        Enter Car Id :<input type="number" name='carid' value={carDetailes.carid} onChange={handleChanges} placeholder='carid' /> <br />
-
-                        <button onClick={handleSubmitDelete}>Submit</button>
+                            </div>
+                        )}
                     </div>
 
-                )}
-            </div>
+                    <br /><br />
 
-            <br /><br />
 
-            <div>
+                    <div className='updateCar'>
 
-                <div>
-                    <p>See all the cars</p>
-                    <button onClick={handleSubmitGet}>Click</button>
+                        <button onClick={() => setShowFormm(true)}>update Car</button> <br /><br />
+
+                        {showFormm && (
+                            <div>
+
+                                Car Id :<input type="number" name='carId' value={carDetailss.carId} onChange={handleChangee} placeholder='CarId' /> <br /><br />
+
+
+                                Company :<input type="text" name='company' value={carDetailss.company} onChange={handleChangee} placeholder='Company' /> <br /><br />
+
+                                Model :<input type="text" name='model' value={carDetailss.model} onChange={handleChangee} placeholder='model' /><br /><br />
+
+                                Color:<input type="text" name='color' value={carDetailss.color} onChange={handleChangee} placeholder='Color' /><br /><br />
+
+                                Year :<input type="number" name='year' value={carDetailss.year} onChange={handleChangee} placeholder='year' /><br /><br />
+
+                                Rent_per_day :<input type="number" name='rentPerDay' value={carDetailss.rentPerDay} onChange={handleChangee} placeholder='rentPerDay' /><br /><br />
+
+                                City Id :<input type="number" name='city.id' value={carDetailss.city.id} onChange={handleChangee} placeholder='City id' /><br /><br />
+
+                                <button onClick={handleSubmitUpdate}>Submit</button>
+
+
+                            </div>
+                        )}
+                    </div>
+                    <br /><br />
+
+
+                    <div className='deleteCar'>
+                        <button onClick={() => setShowForms(true)}>Delete Car</button> <br /><br />
+
+                        {showForms && (
+
+                            <div>
+                                Enter Car Id :<input type="number" name='carid' value={carDetailes.carid} onChange={handleChanges} placeholder='carid' /> <br />
+
+                                <button onClick={handleSubmitDelete}>Submit</button>
+                            </div>
+
+                        )}
+                    </div>
+
+                    <br /><br />
+
+                    <div>
+
+                        <div>
+                            <h2>See All the Cars</h2>
+                            <button onClick={handleSubmitGet}>Click</button>
+                        </div>
+
+                        {cars.length > 0 && (
+                            <div>
+                                <h2>All Cars</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Company</th>
+                                            <th>Model</th>
+                                            <th>Color</th>
+                                            <th>Year</th>
+                                            <th>Rent Per Day</th>
+                                            <th>City</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {cars.map(car => (
+                                            <tr key={car.id}>
+                                                <td>{car.id}</td>
+                                                <td>{car.company}</td>
+                                                <td>{car.model}</td>
+                                                <td>{car.color}</td>
+                                                <td>{car.year}</td>
+                                                <td>{car.rentPerDay}</td>
+                                                <td>{car.city.name}</td> {/* Assuming city object has a 'name' property */}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        )}
+                    </div>
+
                 </div>
 
-                {cars.length > 0 && (
-                    <div>
-                        <h2>All Cars</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Company</th>
-                                    <th>Model</th>
-                                    <th>Color</th>
-                                    <th>Year</th>
-                                    <th>Rent Per Day</th>
-                                    <th>City</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {cars.map(car => (
-                                    <tr key={car.id}>
-                                        <td>{car.id}</td>
-                                        <td>{car.company}</td>
-                                        <td>{car.model}</td>
-                                        <td>{car.color}</td>
-                                        <td>{car.year}</td>
-                                        <td>{car.rentPerDay}</td>
-                                        <td>{car.city.name}</td> {/* Assuming city object has a 'name' property */}
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                )}
+                <div className="adminbg">
+                    <img src={adminbg} alt="" />
+                </div>
             </div>
-
-        </div>
+        </>
     )
 }
 
