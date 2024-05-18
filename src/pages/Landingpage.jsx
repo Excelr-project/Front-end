@@ -16,6 +16,7 @@ const Landingpage = () => {
     const [bookingMessage, setBookingMessage] = useState('');
     const [BookingMessage, setbookingMessage] = useState('');
     const [showBookings, setShowBookings] = useState([]);
+    const today = new Date().toISOString().split('T')[0];
 
     const [Booking, setBooking] = useState([]);
     const [error, setError] = useState('');
@@ -128,9 +129,9 @@ const Landingpage = () => {
 
                     <div className="bar">
 
-                        <input type="date" name="fromDate" id="fromDate" value={fromDate} onChange={(e) => setFromDate(e.target.value)} />
+                        <input type="date" name="fromDate" id="fromDate" value={fromDate} onChange={(e) => setFromDate(e.target.value)} min={today} />
 
-                        <input type="date" name="toDate" id="toDate" value={toDate} onChange={(e) => settoDate(e.target.value)} />
+                        <input type="date" name="toDate" id="toDate" value={toDate} onChange={(e) => settoDate(e.target.value)} min={fromDate} />
 
 
                     </div>

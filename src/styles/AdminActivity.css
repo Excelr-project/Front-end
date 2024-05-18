@@ -33,13 +33,27 @@
     background-size: cover;
 }
 
+
 table {
-    border-collapse: separate;
-    border-spacing: 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
     margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+thead th {
+    border: 2px solid black;
+
+}
+
+tbody td {
+    border: 1px solid black;
+    color: blue;
 }
 
 th,
 td {
-    padding: 5px;
+    border: 2px solid black;
+    padding: 15px;
 }

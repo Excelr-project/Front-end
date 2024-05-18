@@ -53,6 +53,11 @@
     width: 40%;
 }
 
+.forgotpassword span {
+    font-size: 14px;
+    margin-left: 30%;
+}
+
 .forgotpassword form {
     display: grid;
     gap: 15px;

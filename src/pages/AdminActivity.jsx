@@ -285,51 +285,55 @@ const AdminActivity = () => {
 
                     <br /><br />
 
-                    <div>
 
-                        <div>
-                            <h2>See All the Cars</h2>
-                            <button onClick={handleSubmitGet}>Click</button>
-                        </div>
-
-                        {cars.length > 0 && (
-                            <div>
-                                <h2>All Cars</h2>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Company</th>
-                                            <th>Model</th>
-                                            <th>Color</th>
-                                            <th>Year</th>
-                                            <th>Rent Per Day</th>
-                                            <th>City</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {cars.map(car => (
-                                            <tr key={car.id}>
-                                                <td>{car.id}</td>
-                                                <td>{car.company}</td>
-                                                <td>{car.model}</td>
-                                                <td>{car.color}</td>
-                                                <td>{car.year}</td>
-                                                <td>{car.rentPerDay}</td>
-                                                <td>{car.city.name}</td> {/* Assuming city object has a 'name' property */}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        )}
-                    </div>
 
                 </div>
+
+
 
                 <div className="adminbg">
                     <img src={adminbg} alt="" />
                 </div>
+            </div>
+
+            <div className='car-table'>
+
+                <div>
+                    <h2>See All the Cars</h2>
+                    <button onClick={handleSubmitGet}>Click</button>
+                </div>
+
+                {cars.length > 0 && (
+                    <div>
+                        {/* <h2>All Cars</h2> */}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Company</th>
+                                    <th>Model</th>
+                                    <th>Color</th>
+                                    <th>Year</th>
+                                    <th>Rent Per Day</th>
+                                    <th>City</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {cars.map(car => (
+                                    <tr key={car.id}>
+                                        <td>{car.id}</td>
+                                        <td>{car.company}</td>
+                                        <td>{car.model}</td>
+                                        <td>{car.color}</td>
+                                        <td>{car.year}</td>
+                                        <td>{car.rentPerDay}</td>
+                                        <td>{car.city.name}</td> {/* Assuming city object has a 'name' property */}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                )}
             </div>
         </>
     )

@@ -90,6 +90,7 @@ const Login = () => {
                 </div>
 
                 <div className="forgotpassword">
+                    <span>To create New Password, click below</span>
                     <Button onClick={handleForgotPassword}>Forgot Password</Button>
                     {showForgotPasswordForm && (
                         <form onSubmit={handleResetPassword}>
@@ -104,6 +105,8 @@ const Login = () => {
                         </form>
                     )}
                 </div>
+
+                <span>New User ? then <a href="/register">click here</a> to register</span>
 
 
             </div>

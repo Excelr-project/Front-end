@@ -59,8 +59,11 @@ const RegisterPage = () => {
 
                     <input type="password" name="confirmPassword" id='confirmpassword' value={formData.confirmPassword} onChange={handleChange} placeholder='confirm the password' required />
 
-                    <Button type='submit' variant="outlined">Register</Button>
+                    <Button type='submit' variant="outlined">Sign-up</Button>
                 </form>
+
+
+                <p>already a user ? <a href="/login">login</a></p>
             </div>
 
         </div>

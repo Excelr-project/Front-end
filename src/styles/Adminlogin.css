@@ -8,13 +8,13 @@
     background-image: url(../assets/all-images/slider-img/slider-2.jpg);
     background-size: cover;
     background-position: center;
-    width: 65%;
+    width: 60%;
     height: 100vh;
     flex: 1;
 }
 
 .right {
-    width: 35%;
+    width: 40%;
     height: 70vh;
     line-height: 2;
     margin-left: 10px;
@@ -22,6 +22,8 @@
 
 .right h2 {
     text-align: center;
+    color: cadetblue;
+    text-decoration: underline;
     padding: 10px;
 }
 
@@ -38,6 +40,7 @@ input:hover {
 .right button {
     width: fit-content;
     border: 2px solid rgb(146, 136, 155);
+    border-radius: 10px;
     padding: 5px;
 }
 

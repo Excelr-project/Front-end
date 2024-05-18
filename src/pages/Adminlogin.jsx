@@ -56,6 +56,8 @@ const Adminlogin = () => {
                     <button onClick={handleGenerateKey}>Generate key</button>
                 </div>
 
+                <br />
+
 
                 <div>
                     <label htmlFor="key">Key :</label> <br />

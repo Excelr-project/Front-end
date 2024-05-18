@@ -1,5 +1,5 @@
 .register-page {
-    height: 500px;
+    height: 530px;
     width: 100%;
     display: flex;
 }
@@ -45,4 +45,12 @@
 
 .right-container button {
     margin-top: 10px;
+    background: rgb(196, 219, 212);
+    color: black;
+    width: 100px;
+    border: 2px solid black;
+}
+
+.right-container p {
+    text-align: center;
 }
